@@ -33,7 +33,7 @@ async function run() {
   }
 
   //Parse out the labels on the story
-  console.log(`Testing labels: ${labels.join(',')}`);
+  console.log(`Testing status: ${labels.join(',')}`);
   const result = unsatisfiedRequirements(
     labels,
     core.getInput('required_suffix'),
@@ -42,7 +42,7 @@ async function run() {
   console.log(`unsatisfiedRequirements results: ${result.join(',')}`);
   if (result.length > 0) {
     core.setFailed(
-      `Jira ticket indicates the following labels are still needed: ${result.join(
+      `Jira ticket indicates the following status is still needed: ${result.join(
         ', '
       )}`
     );

@@ -12,7 +12,7 @@ function jiraLabels(story, user, token, url) {
 
   return jira
     .findIssue(story)
-    .then((issue) => issue.fields.labels)
+    .then((issue) => issue.fields.status)
     .catch((err) => {
       console.error(err);
     });

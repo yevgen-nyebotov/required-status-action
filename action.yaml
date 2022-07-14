@@ -14,9 +14,9 @@ inputs:
     description: The base URL for jira
     required: true
   default_labels:
-    description: Assumed required labels
-    required: false
-    default: 'design-qa-required|product-qa-required'
+    description: Assumed required status
+    required: true
+    default: 'QA Verified'
   required_suffix:
     description: Append this to the end of a label to mark it required
     required: false
